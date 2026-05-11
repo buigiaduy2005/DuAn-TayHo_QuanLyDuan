@@ -1,0 +1,40 @@
+# Visual Studio temp files
+.vs/
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Xx]64/
+[Xx]86/
+[Aa]rm/
+[Aa]rm64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Visual Studio 2015/2017 cache directories
+.vs/
+
+# Others
+.DS_Store
+*.swp
+*.lock
+.node_repl_history
+
+# Dotnet publish output
+publish/
+
+# Entity Framework Core
+Migrations/
+# Note: Migrations are often kept, but sometimes excluded if generated on the fly. Usually kept.
+# I will keep them but exclude other temp things.

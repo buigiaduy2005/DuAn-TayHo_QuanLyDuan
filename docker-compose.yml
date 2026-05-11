@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  sql-server:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: minipms-sql
+    ports:
+      - "1433:1433" # Port mặc định cài qua C#
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: "Password123!" # Password bắt buộc phải có chữ viết hoa, số và ký tự đặc biệt
+    volumes:
+      - sqlvolume:/var/opt/mssql # Giữ dữ liệu không bị mất khi tắt Docker
+
+  mongodb:
+    image: mongo:latest
+    container_name: minipms-mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongovolume:/data/db
+
+volumes:
+  sqlvolume:
+  mongovolume:
